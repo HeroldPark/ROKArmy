@@ -1,7 +1,13 @@
 import time
+<<<<<<< HEAD
 import requests
 from time import localtime
 from rediscluster import RedisCluster
+=======
+from redis import RedisCluster
+import requests
+from time import localtime
+>>>>>>> 7357ab07369702477f9491202d1ffd68dca49ba7
 import urllib3 
 
 REDIS_HOST = "localhost"
@@ -58,7 +64,11 @@ def get_splunk_logs_by_restAPI():
     logs = response.text
     lines = logs.split('\n')
     fin_time = time.time()
+<<<<<<< HEAD
     print(f"requests_time: {fin_time-current_time}, line_counter: {len(lines)}")
+=======
+    print(f"requests_time: {fin_time-current_time}, line_counter: {lines}")
+>>>>>>> 7357ab07369702477f9491202d1ffd68dca49ba7
 
     return logs
 
